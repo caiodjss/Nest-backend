@@ -1,4 +1,3 @@
-````markdown
 <p align="center">
   <a href="http://nestjs.com/" target="blank">
     <img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" />
@@ -6,7 +5,7 @@
 </p>
 
 <p align="center">
-  Backend em NestJS desenvolvido para evolução da aplicação Compra Mensal, com foco em arquitetura escalável, autenticação segura, qualidade de código e boas práticas de engenharia de software.
+  Backend em NestJS desenvolvido para evolução da aplicação Compra Mensal, com foco em arquitetura escalável, autenticação segura, APIs REST, troubleshooting e boas práticas de engenharia de software.
 </p>
 
 <p align="center">
@@ -25,23 +24,25 @@
 
 Este projeto representa a migração do backend da aplicação **Compra Mensal** de Express.js para NestJS.
 
-O objetivo é aprofundar conhecimentos em arquitetura backend moderna, APIs REST, autenticação, modelagem de banco de dados, organização modular e construção de aplicações escaláveis.
+O objetivo é aprofundar conhecimentos em arquitetura backend moderna, APIs REST, autenticação, modelagem de banco de dados e construção de aplicações escaláveis utilizando uma arquitetura modular.
 
-Além da implementação das funcionalidades, o projeto é utilizado para consolidar habilidades em troubleshooting, investigação de falhas, validação de integrações e boas práticas de engenharia de software.
+Durante o desenvolvimento são aplicados conceitos de troubleshooting, investigação de falhas, análise de fluxos HTTP, validação de integrações, tratamento de erros e boas práticas de engenharia de software.
+
+Além da implementação das funcionalidades, o projeto é utilizado para consolidar conhecimentos em NestJS, Prisma ORM, PostgreSQL, autenticação baseada em JWT e testes automatizados.
 
 ---
 
 # Tecnologias
 
-- NestJS
-- TypeScript
-- Prisma ORM
-- PostgreSQL
-- JWT Authentication
-- Passport
-- Docker
-- Jest
-- Git
+* NestJS
+* TypeScript
+* Prisma ORM
+* PostgreSQL
+* JWT Authentication
+* Passport
+* Docker
+* Jest
+* Git
 
 ---
 
@@ -49,32 +50,41 @@ Além da implementação das funcionalidades, o projeto é utilizado para consol
 
 ## Autenticação
 
-- Cadastro de usuários
-- Login utilizando JWT
-- Refresh Token
-- Rotas protegidas
-- Controle de acesso
+* Cadastro de usuários
+* Login utilizando JWT
+* Refresh Token
+* Rotas protegidas
+* Controle de acesso baseado em permissões
 
 ## Gestão de Produtos
 
-- Cadastro de produtos
-- Atualização de produtos
-- Exclusão de registros
-- Consulta de dados
+* Cadastro de produtos
+* Atualização de produtos
+* Exclusão de registros
+* Consulta de informações
 
 ## Gestão de Categorias
 
-- Cadastro de categorias
-- Relacionamento entre produtos e categorias
-- Validações de integridade dos dados
+* Cadastro de categorias
+* Relacionamento entre produtos e categorias
+* Validações de integridade dos dados
+
+## Integrações e Segurança
+
+* Autenticação baseada em JWT
+* Refresh Token
+* Proteção de rotas utilizando Guards
+* Validação de payloads através de DTOs
+* Tratamento centralizado de exceções
+* Padronização das respostas da API
 
 ## Qualidade e Confiabilidade
 
-- DTOs para validação de entrada
-- Tratamento centralizado de exceções
-- Arquitetura modular
-- Estrutura preparada para testes automatizados
-- Organização voltada para manutenção e escalabilidade
+* Arquitetura modular
+* Separação de responsabilidades
+* Estrutura preparada para testes automatizados
+* Código organizado para manutenção e escalabilidade
+* Tratamento de erros e cenários de exceção
 
 ---
 
@@ -91,63 +101,62 @@ src/
 ├── prisma
 ├── common
 └── config
-````
+```
 
-### Conceitos Aplicados
+Principais responsabilidades:
 
+* auth: autenticação e autorização
+* users: gerenciamento de usuários
+* products: regras de negócio dos produtos
+* categories: gerenciamento de categorias
+* prisma: acesso ao banco de dados
+* common: componentes compartilhados
+* config: configurações da aplicação
+
+---
+
+# Aprendizados Técnicos
+
+Durante a construção deste projeto foram explorados temas como:
+
+* Arquitetura modular com NestJS
 * Dependency Injection
-* Modular Architecture
-* DTO Pattern
-* Validation Pipes
-* Exception Filters
-* Guards
-* Middleware
-* Separation of Concerns
-
----
-
-# Aprendizados Aplicados
-
-Durante a construção deste projeto estou aprofundando conhecimentos em:
-
 * Desenvolvimento de APIs REST
-* Arquitetura de aplicações backend
-* Segurança de aplicações
-* Autenticação e autorização
-* Modelagem de banco de dados relacionais
-* Troubleshooting de aplicações
-* Investigação e correção de falhas
-* Boas práticas de engenharia de software
-* Manutenção e evolução de sistemas
+* Autenticação e autorização com JWT
+* Modelagem de banco de dados relacional
+* Integração com PostgreSQL utilizando Prisma ORM
+* Troubleshooting e análise de erros
+* Investigação de falhas em integrações
+* Validação de dados e regras de negócio
+* Estruturação de aplicações escaláveis
+* Boas práticas de manutenção de código
+* Organização para testes automatizados
 
 ---
 
-# Objetivo do Projeto
+# Execução do Projeto
 
-Este repositório representa minha evolução como desenvolvedor backend.
-
-A proposta não é apenas implementar funcionalidades, mas compreender o comportamento da aplicação, validar integrações, identificar problemas e construir soluções organizadas, escaláveis e preparadas para crescimento.
-
----
-
-# Instalação
+Instalação das dependências:
 
 ```bash
 yarn install
 ```
 
----
-
-# Execução
+Ambiente de desenvolvimento:
 
 ```bash
-# desenvolvimento
-yarn start
-
-# watch mode
 yarn start:dev
+```
 
-# produção
+Build da aplicação:
+
+```bash
+yarn build
+```
+
+Execução em produção:
+
+```bash
 yarn start:prod
 ```
 
@@ -155,37 +164,28 @@ yarn start:prod
 
 # Testes
 
+Executar testes unitários:
+
 ```bash
-# testes unitários
 yarn test
+```
 
-# testes e2e
+Executar testes E2E:
+
+```bash
 yarn test:e2e
+```
 
-# cobertura de testes
+Executar cobertura de testes:
+
+```bash
 yarn test:cov
 ```
 
 ---
 
-# Próximos Passos
+# Objetivo do Projeto
 
-* Implementar autenticação completa com JWT e Refresh Token
-* Estruturar controle de acesso por perfis
-* Adicionar testes unitários e de integração
-* Implementar logs estruturados
-* Melhorar observabilidade da aplicação
-* Evoluir a arquitetura da versão Express para uma estrutura totalmente modular em NestJS
+Este projeto foi criado para evoluir conhecimentos em desenvolvimento backend, arquitetura de software e construção de APIs escaláveis.
 
----
-
-# Status
-
-🚧 Em desenvolvimento
-
-Migração em andamento da versão Express.js para NestJS.
-
-Projeto utilizado para estudo avançado de arquitetura backend, APIs REST, autenticação e boas práticas de engenharia de software.
-
-```
-```
+Além do desenvolvimento das funcionalidades, o foco está na compreensão profunda do comportamento da aplicação, investigação de problemas, análise de integrações e implementação de soluções robustas, habilidades diretamente relacionadas ao dia a dia de times de engenharia de software e suporte técnico especializado.

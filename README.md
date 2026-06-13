@@ -1,98 +1,191 @@
+````markdown
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
+  <a href="http://nestjs.com/" target="blank">
+    <img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" />
+  </a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
+<p align="center">
+  Backend em NestJS desenvolvido para evolução da aplicação Compra Mensal, com foco em arquitetura escalável, autenticação segura, qualidade de código e boas práticas de engenharia de software.
 </p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+<p align="center">
+<a href="https://nestjs.com/" target="_blank"><img src="https://img.shields.io/badge/NestJS-Framework-red" alt="NestJS"/></a>
+<a href="https://www.typescriptlang.org/" target="_blank"><img src="https://img.shields.io/badge/TypeScript-5.x-blue" alt="TypeScript"/></a>
+<a href="https://www.prisma.io/" target="_blank"><img src="https://img.shields.io/badge/Prisma-ORM-2D3748" alt="Prisma"/></a>
+<a href="https://www.postgresql.org/" target="_blank"><img src="https://img.shields.io/badge/PostgreSQL-Database-336791" alt="PostgreSQL"/></a>
+<a href="https://jwt.io/" target="_blank"><img src="https://img.shields.io/badge/JWT-Authentication-orange" alt="JWT"/></a>
+<a href="https://jestjs.io/" target="_blank"><img src="https://img.shields.io/badge/Jest-Testing-C21325" alt="Jest"/></a>
+<a href="https://www.docker.com/" target="_blank"><img src="https://img.shields.io/badge/Docker-Containerization-2496ED" alt="Docker"/></a>
+</p>
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+---
 
-## Project setup
+# Descrição
+
+Este projeto representa a migração do backend da aplicação **Compra Mensal** de Express.js para NestJS.
+
+O objetivo é aprofundar conhecimentos em arquitetura backend moderna, APIs REST, autenticação, modelagem de banco de dados, organização modular e construção de aplicações escaláveis.
+
+Além da implementação das funcionalidades, o projeto é utilizado para consolidar habilidades em troubleshooting, investigação de falhas, validação de integrações e boas práticas de engenharia de software.
+
+---
+
+# Tecnologias
+
+- NestJS
+- TypeScript
+- Prisma ORM
+- PostgreSQL
+- JWT Authentication
+- Passport
+- Docker
+- Jest
+- Git
+
+---
+
+# Funcionalidades
+
+## Autenticação
+
+- Cadastro de usuários
+- Login utilizando JWT
+- Refresh Token
+- Rotas protegidas
+- Controle de acesso
+
+## Gestão de Produtos
+
+- Cadastro de produtos
+- Atualização de produtos
+- Exclusão de registros
+- Consulta de dados
+
+## Gestão de Categorias
+
+- Cadastro de categorias
+- Relacionamento entre produtos e categorias
+- Validações de integridade dos dados
+
+## Qualidade e Confiabilidade
+
+- DTOs para validação de entrada
+- Tratamento centralizado de exceções
+- Arquitetura modular
+- Estrutura preparada para testes automatizados
+- Organização voltada para manutenção e escalabilidade
+
+---
+
+# Arquitetura
+
+Estrutura baseada nos princípios de modularização do NestJS:
+
+```text
+src/
+├── auth
+├── users
+├── products
+├── categories
+├── prisma
+├── common
+└── config
+````
+
+### Conceitos Aplicados
+
+* Dependency Injection
+* Modular Architecture
+* DTO Pattern
+* Validation Pipes
+* Exception Filters
+* Guards
+* Middleware
+* Separation of Concerns
+
+---
+
+# Aprendizados Aplicados
+
+Durante a construção deste projeto estou aprofundando conhecimentos em:
+
+* Desenvolvimento de APIs REST
+* Arquitetura de aplicações backend
+* Segurança de aplicações
+* Autenticação e autorização
+* Modelagem de banco de dados relacionais
+* Troubleshooting de aplicações
+* Investigação e correção de falhas
+* Boas práticas de engenharia de software
+* Manutenção e evolução de sistemas
+
+---
+
+# Objetivo do Projeto
+
+Este repositório representa minha evolução como desenvolvedor backend.
+
+A proposta não é apenas implementar funcionalidades, mas compreender o comportamento da aplicação, validar integrações, identificar problemas e construir soluções organizadas, escaláveis e preparadas para crescimento.
+
+---
+
+# Instalação
 
 ```bash
-$ yarn install
+yarn install
 ```
 
-## Compile and run the project
+---
+
+# Execução
 
 ```bash
-# development
-$ yarn run start
+# desenvolvimento
+yarn start
 
 # watch mode
-$ yarn run start:dev
+yarn start:dev
 
-# production mode
-$ yarn run start:prod
+# produção
+yarn start:prod
 ```
 
-## Run tests
+---
+
+# Testes
 
 ```bash
-# unit tests
-$ yarn run test
+# testes unitários
+yarn test
 
-# e2e tests
-$ yarn run test:e2e
+# testes e2e
+yarn test:e2e
 
-# test coverage
-$ yarn run test:cov
+# cobertura de testes
+yarn test:cov
 ```
 
-## Deployment
+---
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+# Próximos Passos
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+* Implementar autenticação completa com JWT e Refresh Token
+* Estruturar controle de acesso por perfis
+* Adicionar testes unitários e de integração
+* Implementar logs estruturados
+* Melhorar observabilidade da aplicação
+* Evoluir a arquitetura da versão Express para uma estrutura totalmente modular em NestJS
 
-```bash
-$ yarn install -g @nestjs/mau
-$ mau deploy
+---
+
+# Status
+
+🚧 Em desenvolvimento
+
+Migração em andamento da versão Express.js para NestJS.
+
+Projeto utilizado para estudo avançado de arquitetura backend, APIs REST, autenticação e boas práticas de engenharia de software.
+
 ```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+```
